@@ -1,0 +1,12 @@
+# .gitignore
+__pycache__/
+*.pyc
+.env
+.vscode/
+.idea/
+dist/
+build/
+*.sqlite
+*.db
+*.log
+daily_sales_data_*.csv
