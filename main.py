@@ -16,3 +16,7 @@ final_df = pd.concat([df1,df2,df3],ignore_index=True)
 
 
 final_df["sales"] = final_df["price"]*final_df["quantity"]
+final_df.drop(columns=["price","quantity","product"],inplace=True)
+
+final_df["sales"]  = final_df["sales"].astype(str).str.count(r"\$3\.00").mul(3.00)
+print(final_df.head(5))
